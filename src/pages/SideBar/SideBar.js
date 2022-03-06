@@ -12,13 +12,13 @@ import {
   SidebarListTitle,
   MobileTopBar,
   Bars,
-  Logoo
+  Logoo,
 } from "./SideBarElements";
 const SideBar = () => {
-    const [isOpen, setIsOpen] = useState(false);
-    const openMobileMenu = () => {
-        setIsOpen(!isOpen)
-    }
+  const [isOpen, setIsOpen] = useState(false);
+  const openMobileMenu = () => {
+    setIsOpen(!isOpen);
+  };
   return (
     <Fragment>
       <SidebarContainer>
@@ -26,31 +26,31 @@ const SideBar = () => {
           <Logo>
             <img src={logo} alt='hervest-logo' />
           </Logo>
-          <div className="closebtn" onClick={openMobileMenu}>< X size={28} /></div>
-        <Menu>
-            Menu
-        </Menu>
+          <div className='closebtn' onClick={openMobileMenu}>
+            <X size={28} />
+          </div>
+          <Menu>Menu</Menu>
           {SideBarData.map((item, index) => (
             <SidebarList key={index} title={item.title}>
-              <SidebarListIcon><img src={item.icon} alt="icon" /></SidebarListIcon>
+              <SidebarListIcon>
+                <img src={item.icon} alt='icon' />
+              </SidebarListIcon>
               <SidebarListTitle>{item.title}</SidebarListTitle>
             </SidebarList>
           ))}
         </SidebarItems>
       </SidebarContainer>
       <MobileTopBar>
-     
         <Logoo>
           <img src={logo} alt='mobile monnyremit logo' />
         </Logoo>
-          <Bars onClick={openMobileMenu}>
-          <div className="wrapper">
-          <div className="bars"></div>
-          <div className="bars"></div>
-          <div className="bars"></div>
+        <Bars onClick={openMobileMenu}>
+          <div className='wrapper'>
+            <div className='bars'></div>
+            <div className='bars'></div>
+            <div className='bars'></div>
           </div>
         </Bars>
-        
       </MobileTopBar>
     </Fragment>
   );

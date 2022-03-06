@@ -71,7 +71,7 @@ export const BalanceWrapper = styled.div`
     position : absolute;
     background-position : cover;
     top : 76px;
-    right : 167px;
+    right : 130px;
     @media screen and (max-width : 768px){
      display : none;
 
@@ -102,8 +102,8 @@ export const BalanceAmount = styled.p`
   font-size: 20px;
   font-style: normal;
   font-weight: 500;
-  line-height: px;
   letter-spacing: 0.02em;
+  padding : 5px;
 `;
 export const Plans = styled.div``;
 export const PlansTitle = styled.div`
@@ -146,7 +146,6 @@ export const SaveWrapper = styled.div`
    flex-direction: column;
    justify-content: space-around;
    height : 600px;
-  //  background-color: ;
  }
 `;
 export const SaveCard = styled.div`
@@ -159,16 +158,12 @@ export const SaveCard = styled.div`
   border-radius: 12px;
   @media screen and (max-width : 768px){
    width : 100%;
-  // justify-content :;
-  height : px;
  }
 `;
 export const FirstContent = styled.div`
   display: flex;
   align-items: flex-end;
   padding-left: 15px;
-  div {
-  }
   p {
     color: rgba(0, 0, 0, 1);
     font-family: Montserrat;
@@ -186,7 +181,6 @@ export const FirstContent = styled.div`
   }
 `;
 export const SecondContent = styled.div`
-  // background-color: ;
   padding: 15px;
   h3 {
     font-family: Montserrat;

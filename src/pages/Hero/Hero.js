@@ -28,7 +28,6 @@ import ellipse2 from "../../assets/ellipse2.svg";
 const Hero = () => {
   return (
     <Fragment>
-        
       <SideBar />
       <Container>
         <Wrapper>
@@ -46,9 +45,9 @@ const Hero = () => {
                 <BalanceAmount>{item.amount}</BalanceAmount>
               </Balance>
             ))}
-            <img src={ellipse1} className='balanceimg' alt="" />
-            <img src={ellipse1} className='balanceimg2' alt="" />
-            <img src={ellipse2} className='balanceimg3' alt=""/>
+            <img src={ellipse1} className='balanceimg' alt='' />
+            <img src={ellipse1} className='balanceimg2' alt='' />
+            <img src={ellipse2} className='balanceimg3' alt='' />
           </BalanceWrapper>
           <Plans>
             <PlansTitle>

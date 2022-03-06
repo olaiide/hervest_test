@@ -221,17 +221,17 @@ export const DataCard = styled.div`
   justify-content: center;
   height: 190px;
   ${(props) =>
-    props.class === "first" &&
+    props.text === "first" &&
     css`
       background-color: #e2698d;
     `}
   ${(props) =>
-    props.class === "second" &&
+    props.text === "second" &&
     css`
       background-color: #265859;
     `}
   ${(props) =>
-    props.class === "third" &&
+    props.text === "third" &&
     css`
       background-color: #f2f1f3;
     `}
@@ -252,7 +252,7 @@ export const LeftContent = styled.div`
     letter-spacing: -0.11008000373840332px;
     color: #fff;
     ${(props) =>
-      props.class === "third" &&
+      props.text === "third" &&
       css`
         color: #e2698d;
       `}
@@ -266,12 +266,12 @@ export const LeftContent = styled.div`
     letter-spacing: -0.23999999463558197px;
     color: white;
     ${(props) =>
-      props.class === "first" &&
+      props.text === "first" &&
       css`
         color: #fbeaef;
       `}
     ${(props) =>
-      props.class === "third" &&
+      props.text === "third" &&
       css`
         color: #37474f;
       `}
@@ -285,7 +285,7 @@ export const LeftContent = styled.div`
   }
   .code {
     ${(props) =>
-      props.class === "third" &&
+      props.text === "third" &&
       css`
         background-color: #e2698d;
         padding: 4px 7px;

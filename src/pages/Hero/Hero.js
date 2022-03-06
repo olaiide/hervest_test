@@ -85,10 +85,10 @@ const Hero = () => {
           </SaveContainer>
           <DataWrapper>
             {Data.map((item) => (
-              <DataCard key={item.id} class={item.className}>
-                <LeftContent class={item.className}>
+              <DataCard key={item.id} text={item.className}>
+                <LeftContent text={item.className}>
                   <h3>{item.title}</h3>
-                  <p class={item.className}>{item.text}</p>
+                  <p text={item.className}>{item.text}</p>
                   <div className='codeWrap'>
                     <div className='code'>{item.code}</div>
                     <div className='share'>{item.share}</div>

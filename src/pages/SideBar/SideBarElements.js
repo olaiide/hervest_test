@@ -5,9 +5,10 @@ export const SidebarContainer = styled.div`
 `;
 
 export const Logo = styled.div`
-  margin-left: 3rem;
+  /* margin-left: 3rem;
   padding-top: 1em;
-  margin-bottom: 2.3rem;
+  margin-bottom: 2.3rem; */
+  margin-top : 1rem;
   @media screen and (max-width: 768px) {
     display: none;
   }
@@ -20,23 +21,27 @@ export const Menu = styled.div`
   font-weight: 300;
   line-height: 17px;
   letter-spacing: 0em;
-  padding: 30px;
+  margin-top : 30px;
+  padding-bottom : 15px;
   @media screen and (max-width : 768px){
     padding : 0;
   }
 `;
 export const SidebarItems = styled.ul`
+background-color : ;
   list-style: none;
   width: 15%;
   transition: width 0.5s;
   height: 100%;
   background-color: #fff;
+  background-color : ;
   position: fixed;
   left: 0;
   top: 0;
   z-index: 99;
   overflow: ;
-  padding-top: 25px;
+  margin-top: 0rem;
+  
   transition: all 0.3s cubic-bezier(0.42, 0, 0.58, 1);
   .closebtn {
     display: none;
@@ -45,7 +50,7 @@ export const SidebarItems = styled.ul`
       color: black;
       margin-left: 11rem;
       margin-top: 0px;
-      margin-bottom: 1rem;
+      margin-bottom: 0.5rem;
       width: 30px;
       height: 27px;
       bottom: 10px;
@@ -53,40 +58,44 @@ export const SidebarItems = styled.ul`
       cursor: pointer;
       transition: all 0.3s cubic-bezier(0.42, 0, 0.58, 1);
     }
+
   }
   @media screen and (max-width: 768px) {
     left: ${(props) => (props.click ? "0" : "-110%")} !important;
     width: 210px !important;
     transition: ${(props) =>
       props.click ? " all 0.7s ease" : "all 0.7s ease"};
-    position: fixed;
+    /* position: fixed;
     left: 0;
-    bottom: 0;
-    overflow-x: hidden;
+    bottom: 0; */
+    overflow-x: auto;
     height: 100%;
   }
 `;
 
 export const SidebarList = styled.li`
   display: flex;
-  align-items: center;
-  justify-content: space-around;
+  /* align-items: center;
+  justify-content: space-around; */
   color: #626375;
   width: 80%;
   border-radius: px;
-  margin: 0 auto;
-  padding: 10px;
+  padding: 10px 0px;
   line-height: 22px;
   font-weight: 600;
   cursor: pointer;
-
   &:hover {
     background: #fdf6f8;
     border-radius: 12px;
   }
   @media screen and (max-width: 768px) {
     transition: 2.5s;
-    padding: 15px 0px;
+   // padding: 15px 0px;
+   background :;
+   margin-right:60px ;
+   /* text-align : center;
+   width: 100% ;
+   justify-content : center; */
   }
 `;
 
@@ -94,6 +103,7 @@ export const SidebarListIcon = styled.div`
   flex: 30%;
   display: grid;
   place-items: center;
+  background-color : ;
 `;
 export const SidebarListTitle = styled.div`
   flex: 70%;
@@ -107,7 +117,7 @@ export const SidebarListTitle = styled.div`
   font-weight: 300;
   line-height: 17px;
   letter-spacing: 0em;
-
+  background-color : ;
   transition: all 0.3s cubic-bezier(0.42, 0, 0.58, 1);
 `;
 

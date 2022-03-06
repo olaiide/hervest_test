@@ -53,16 +53,23 @@ export const BalanceWrapper = styled.div`
     height : 400px;
   }
   ::before{
-  content: "";
-  background: url(${ellipse});
-  background-size: cover;
-  background-position: center;
-  top : 0;
-  left : -300px;
-   right : -250px;
-  bottom : px;
-  height : 100px;
-  width : 200px;
+    content: "";
+    background: url(${ellipse});
+    background-size: cover;
+    background-position: center;
+    top : 0;
+    left : -300px;
+    right : -250px;
+    bottom : px;
+    height : 100px;
+    width : 200px;
+  }
+  .balanceimg{
+    background-size: cover;
+    width: 200px;
+    height: 100px;
+    background-position: center;
+    inset:0px 0px 0px 0px;
   }
 `;
 
@@ -132,7 +139,7 @@ export const SaveWrapper = styled.div`
    flex-direction: column;
    justify-content: space-around;
    height : 600px;
-   background-color: ;
+  //  background-color: ;
  }
 `;
 export const SaveCard = styled.div`
@@ -145,7 +152,7 @@ export const SaveCard = styled.div`
   border-radius: 12px;
   @media screen and (max-width : 768px){
    width : 100%;
-  justify-content :;
+  // justify-content :;
   height : px;
  }
 `;
@@ -172,7 +179,7 @@ export const FirstContent = styled.div`
   }
 `;
 export const SecondContent = styled.div`
-  background-color: ;
+  // background-color: ;
   padding: 15px;
   h3 {
     font-family: Montserrat;

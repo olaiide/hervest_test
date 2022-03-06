@@ -71,9 +71,13 @@ const Hero = () => {
           <DataWrapper>
             {Data.map((item) => (
               <DataCard key={item.id} class={item.className}>
-                <LeftContent>
+                <LeftContent class={item.className}>
                   <h3>{item.title}</h3>
-                  <p>{item.text}</p>
+                  <p class={item.className}>{item.text}</p>
+                  <div className="codeWrap">
+                     <div className="code">{item.code}</div>
+                     <div className="share">{item.share}</div>
+                  </div>
                 </LeftContent>
                 <RightContent>
                     <img src={item.icon} alt="logo"/>

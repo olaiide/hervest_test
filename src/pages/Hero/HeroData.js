@@ -66,6 +66,8 @@ export const Data = [
     title : 'Invite your girls to HerVest',
     text : 'Share you girl code.',
     icon : girls,
-    className : 'third'
+    className : 'third',
+    code : 'HG7FIB',
+    share : 'Share'
   }
 ]

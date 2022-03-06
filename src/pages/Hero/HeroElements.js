@@ -1,9 +1,9 @@
-import styled, { css} from "styled-components";
+import styled, { css } from "styled-components";
 
 export const Container = styled.div`
   min-height: 100vh;
   background-color: rgba(243, 241, 241, 0.98);
-  background-color: #FAF9F6 ;
+  background-color: #faf9f6;
   margin-left: 20%;
   overflow-x: hidden;
   overflow-y: scroll;
@@ -92,7 +92,7 @@ export const PlansTitle = styled.div`
   }
 `;
 export const SaveWrapper = styled.div`
-  display : flex;
+  display: flex;
   justify-content: space-between;
 `;
 export const SaveCard = styled.div`
@@ -151,34 +151,36 @@ export const SecondContent = styled.div`
 `;
 
 export const DataWrapper = styled.div`
-  display : flex;
+  display: flex;
   justify-content: space-between;
 
-  margin-top : 20px;
-  padding-bottom : 20px;
+  margin-top: 20px;
+  padding-bottom: 20px;
 `;
 export const DataCard = styled.div`
   display: flex;
   justify-content: center;
   height: 190px;
-  ${ props => props.class === 'first' && css`
-    background-color: #E2698D;
-  `}
-  ${ props => props.class === 'second' && css`
-    background-color: #265859;
-  `}
-  ${ props => props.class === 'third' && css`
-    background-color: #F2F1F3;
-  `}
+  ${(props) =>
+    props.class === "first" &&
+    css`
+      background-color: #e2698d;
+    `}
+  ${(props) =>
+    props.class === "second" &&
+    css`
+      background-color: #265859;
+    `}
+  ${(props) =>
+    props.class === "third" &&
+    css`
+      background-color: #f2f1f3;
+    `}
   border-radius : 12px;
-  width : 32%;
+  width: 32%;
 `;
 export const LeftContent = styled.div`
-padding : 10px;
-background-color: ;
-width : %;
-
-  color: #fff;
+  padding: 10px;
   h3 {
     font-family: Montserrat;
     font-size: 16px;
@@ -186,23 +188,70 @@ width : %;
     font-weight: 700;
     line-height: 20px;
     letter-spacing: -0.11008000373840332px;
-
-    p {
-      font-family: Montserrat;
-      font-size: 10px;
-      font-style: normal;
-      font-weight: 300;
-      line-height: 12px;
-      letter-spacing: -0.23999999463558197px;
-    }
+    color: #fff;
+    ${(props) =>
+      props.class === "third" &&
+      css`
+        color: #e2698d;
+      `}
+  }
+  p {
+    font-family: Montserrat;
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 12px;
+    letter-spacing: -0.23999999463558197px;
+    color: white;
+    ${(props) =>
+      props.class === "first" &&
+      css`
+        color: #fbeaef;
+      `}
+    ${(props) =>
+      props.class === "third" &&
+      css`
+        color: #37474f;
+      `}
+  }
+  .codeWrap {
+    display: flex;
+    width: 110px;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 50px;
+  }
+  .code {
+    ${(props) =>
+      props.class === "third" &&
+      css`
+        background-color: #e2698d;
+        padding: 4px;
+        border-radius: 8px;
+        font-family: Montserrat;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 20px;
+        letter-spacing: 0.02em;
+        color: #fbeaef;
+      `}
+  }
+  .share {
+    font-family: Montserrat;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 18px;
+    letter-spacing: 0px;
+    color: #265859;
   }
 `;
 
 export const RightContent = styled.div`
-display : flex;
-flex-direction: column ;
-justify-content:center ;
-width: 40% ;
-background-color:;
-padding : 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 40%;
+  padding: 5px;
 `;

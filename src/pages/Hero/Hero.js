@@ -13,9 +13,13 @@ import {
   SaveCard,
   FirstContent,
   SecondContent,
+  DataWrapper,
+  DataCard,
+  LeftContent, 
+  RightContent
 } from "./HeroElements";
 import header from "../../assets/header.svg";
-import { BalanceData, SaveData } from "./HeroData";
+import { BalanceData, SaveData, Data } from "./HeroData";
 const Hero = () => {
   return (
     <Fragment>
@@ -30,7 +34,7 @@ const Hero = () => {
           </Header>
           <BalanceWrapper>
             {BalanceData.map((item) => (
-              <Balance>
+              <Balance key={item.id}>
                 <BalanceTitle>{item.title}</BalanceTitle>
                 <BalanceAmount>{item.amount}</BalanceAmount>
               </Balance>
@@ -44,7 +48,7 @@ const Hero = () => {
           </Plans>
           <SaveWrapper>
             {SaveData.map((item) => (
-              <SaveCard>
+              <SaveCard key={item.id}>
                 <FirstContent>
                   <div>
                     <img src={item.icon} alt='save_icon' width='40px' />
@@ -56,11 +60,27 @@ const Hero = () => {
                 <SecondContent>
                   <div>
                     <h3>{item.amount}</h3>
+                    <div className='progress'>
+                      <div className='progress__bar'></div>
+                    </div>
                   </div>
                 </SecondContent>
               </SaveCard>
             ))}
           </SaveWrapper>
+          <DataWrapper>
+            {Data.map((item) => (
+              <DataCard key={item.id} class={item.className}>
+                <LeftContent>
+                  <h3>{item.title}</h3>
+                  <p>{item.text}</p>
+                </LeftContent>
+                <RightContent>
+                    <img src={item.icon} alt="logo"/>
+                </RightContent>
+              </DataCard>
+            ))}
+          </DataWrapper>
         </Wrapper>
       </Container>
     </Fragment>

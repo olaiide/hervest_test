@@ -1,14 +1,15 @@
-import styled from "styled-components";
+import styled, { css} from "styled-components";
 
 export const Container = styled.div`
   min-height: 100vh;
   background-color: rgba(243, 241, 241, 0.98);
+  background-color: #FAF9F6 ;
   margin-left: 20%;
-  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: scroll;
 `;
 export const Wrapper = styled.div`
   width: 93%;
-  background: rgba(243, 241, 241, 0.98);
   margin: 0 auto;
 `;
 export const Header = styled.div`
@@ -91,34 +92,23 @@ export const PlansTitle = styled.div`
   }
 `;
 export const SaveWrapper = styled.div`
-display: grid;
-grid-template-columns:  repeat(3, 0.1fr);
-margin: 0 auto;
-height : 173px;
-  width: 100%;
-  background :;
-  justify-content : center;
-  row-gap : 30px;
-  column-gap : 30px;
+  display : flex;
+  justify-content: space-between;
 `;
 export const SaveCard = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-
-  width: 100%;
-  max-width: px ;
+  width: 32%;
   height: 173px;
   background: rgba(255, 255, 255, 1);
   border-radius: 12px;
 `;
 export const FirstContent = styled.div`
   display: flex;
-  align-items : flex-end;
-  padding-left : 15px;
-  background-color : ;
+  align-items: flex-end;
+  padding-left: 15px;
   div {
-   
   }
   p {
     color: rgba(0, 0, 0, 1);
@@ -129,13 +119,15 @@ export const FirstContent = styled.div`
     line-height: 24px;
     letter-spacing: 0.02em;
     padding-left: 10px;
-    display : flex;
-    justify-content :center;
-    flex-direction : column;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+    top: 4px;
   }
 `;
 export const SecondContent = styled.div`
-background-color: ;
+  background-color: ;
   padding: 15px;
   h3 {
     font-family: Montserrat;
@@ -145,4 +137,72 @@ background-color: ;
     line-height: 29px;
     letter-spacing: 0em;
   }
+  .progress {
+    color: #000;
+    background: rgba(242, 241, 243, 1);
+  }
+  .progress__bar {
+    height: 4px;
+    width: 40%;
+    color: #fff !important;
+    background-color: rgba(38, 88, 89, 1);
+    border-radius: 2px;
+  }
+`;
+
+export const DataWrapper = styled.div`
+  display : flex;
+  justify-content: space-between;
+
+  margin-top : 20px;
+  padding-bottom : 20px;
+`;
+export const DataCard = styled.div`
+  display: flex;
+  justify-content: center;
+  height: 190px;
+  ${ props => props.class === 'first' && css`
+    background-color: #E2698D;
+  `}
+  ${ props => props.class === 'second' && css`
+    background-color: #265859;
+  `}
+  ${ props => props.class === 'third' && css`
+    background-color: #F2F1F3;
+  `}
+  border-radius : 12px;
+  width : 32%;
+`;
+export const LeftContent = styled.div`
+padding : 10px;
+background-color: ;
+width : %;
+
+  color: #fff;
+  h3 {
+    font-family: Montserrat;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 20px;
+    letter-spacing: -0.11008000373840332px;
+
+    p {
+      font-family: Montserrat;
+      font-size: 10px;
+      font-style: normal;
+      font-weight: 300;
+      line-height: 12px;
+      letter-spacing: -0.23999999463558197px;
+    }
+  }
+`;
+
+export const RightContent = styled.div`
+display : flex;
+flex-direction: column ;
+justify-content:center ;
+width: 40% ;
+background-color:;
+padding : 5px;
 `;

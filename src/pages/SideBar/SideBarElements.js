@@ -1,7 +1,6 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
 export const SidebarContainer = styled.div`
-  overflow-x : ;
 `;
 
 export const Logo = styled.div`
@@ -22,24 +21,22 @@ export const Menu = styled.div`
   line-height: 17px;
   letter-spacing: 0em;
   margin-top : 30px;
-  padding-bottom : 15px;
+  margin-bottom : 30px;
   @media screen and (max-width : 768px){
     padding : 0;
   }
 `;
 export const SidebarItems = styled.ul`
-background-color : ;
   list-style: none;
   width: 15%;
   transition: width 0.5s;
-  height: 100%;
+  min-height: 100vh;
   background-color: #fff;
-  background-color : ;
   position: fixed;
   left: 0;
   top: 0;
   z-index: 99;
-  overflow: ;
+  overflow: hidden;
   margin-top: 0rem;
   
   transition: all 0.3s cubic-bezier(0.42, 0, 0.58, 1);
@@ -48,9 +45,12 @@ background-color : ;
     @media screen and (max-width: 768px) {
       display: block;
       color: black;
-      margin-left: 11rem;
-      margin-top: 0px;
-      margin-bottom: 0.5rem;
+      /* margin-left: 11rem;
+      margin-top: 20px;
+      margin-bottom: 0.5rem; */
+      position : relative;
+      top : 20px;
+      left : 130px;
       width: 30px;
       height: 27px;
       bottom: 10px;
@@ -79,23 +79,24 @@ export const SidebarList = styled.li`
   justify-content: space-around; */
   color: #626375;
   width: 80%;
-  border-radius: px;
-  padding: 10px 0px;
+  border-radius: 10px;
+  padding: 13px;
   line-height: 22px;
   font-weight: 600;
+  ${(props) =>
+    props.title === "Dashboard" &&
+    css`
+    background-color:#fdf6f8;
+    `}
   cursor: pointer;
-  &:hover {
+  /* &:hover {
     background: #fdf6f8;
-    border-radius: 12px;
-  }
+    border-radius: 5px;
+  } */
   @media screen and (max-width: 768px) {
     transition: 2.5s;
-   // padding: 15px 0px;
-   background :;
    margin-right:60px ;
-   /* text-align : center;
-   width: 100% ;
-   justify-content : center; */
+  
   }
 `;
 
@@ -103,21 +104,19 @@ export const SidebarListIcon = styled.div`
   flex: 30%;
   display: grid;
   place-items: center;
-  background-color : ;
 `;
 export const SidebarListTitle = styled.div`
   flex: 70%;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 10px 15px;
+  padding:0px;
   font-family: Montserrat;
-  font-size: 14px;
+  font-size: 12px;
   font-style: normal;
   font-weight: 300;
   line-height: 17px;
   letter-spacing: 0em;
-  background-color : ;
   transition: all 0.3s cubic-bezier(0.42, 0, 0.58, 1);
 `;
 

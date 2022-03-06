@@ -31,7 +31,7 @@ const SideBar = () => {
             Menu
         </Menu>
           {SideBarData.map((item, index) => (
-            <SidebarList key={index}>
+            <SidebarList key={index} title={item.title}>
               <SidebarListIcon><img src={item.icon} alt="icon" /></SidebarListIcon>
               <SidebarListTitle>{item.title}</SidebarListTitle>
             </SidebarList>

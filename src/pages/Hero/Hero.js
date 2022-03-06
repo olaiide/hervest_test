@@ -23,7 +23,8 @@ import header from "../../assets/header.svg";
 import arrow from "../../assets/arrow.svg";
 import { BalanceData, SaveData, Data } from "./HeroData";
 import SideBar from "../SideBar/SideBar";
-import ellipse1 from "../../assets/ellipse1.svg"
+import ellipse1 from "../../assets/ellipse1.svg";
+import ellipse2 from "../../assets/ellipse2.svg";
 const Hero = () => {
   return (
     <Fragment>
@@ -46,6 +47,8 @@ const Hero = () => {
               </Balance>
             ))}
             <img src={ellipse1} className='balanceimg' alt="" />
+            <img src={ellipse1} className='balanceimg2' alt="" />
+            <img src={ellipse2} className='balanceimg3' alt=""/>
           </BalanceWrapper>
           <Plans>
             <PlansTitle>

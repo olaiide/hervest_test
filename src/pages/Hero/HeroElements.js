@@ -1,16 +1,12 @@
 import styled, { css } from "styled-components";
-import ellipse from "../../assets/ellipse1.svg"
 export const Container = styled.div`
   min-height: 100vh;
-  background-color: rgba(243, 241, 241, 0.98);
   background-color: #faf9f6;
   margin-left: 20%;
   overflow: hidden;
   @media screen and (max-width : 768px){
     margin-left: 0% ;
   }
-  /* overflow-x: hidden;
-  overflow-y: scroll; */
 `;
 export const Wrapper = styled.div`
   width: 93%;
@@ -47,29 +43,39 @@ export const BalanceWrapper = styled.div`
   display: grid;
   grid-template-columns: repeat(4, 0.3fr);
   justify-content: center;
-  position:  relative;
+  position:relative;
+  overflow:hidden;
   @media screen and (max-width : 768px){
     grid-template-columns : repeat(2, 0.3fr);
     height : 400px;
   }
-  ::before{
-    content: "";
-    background: url(${ellipse});
-    background-size: cover;
-    background-position: center;
-    top : 0;
-    left : -300px;
-    right : -250px;
-    bottom : px;
-    height : 100px;
-    width : 200px;
-  }
   .balanceimg{
     background-size: cover;
-    width: 200px;
-    height: 100px;
+    width: 400px;
+    height: 400px;
     background-position: center;
-    inset:0px 0px 0px 0px;
+    top: -147px;
+    right: 173px;
+    position: absolute;
+  }
+  .balanceimg2{
+    width: 400px;
+    height: 400px;
+    background-position: center;
+    bottom: -219px;
+    left: -96px;
+    position: absolute;
+    transform: rotate(180deg);
+  }
+  .balanceimg3{
+    position : absolute;
+    background-position : cover;
+    top : 76px;
+    right : 167px;
+    @media screen and (max-width : 768px){
+     display : none;
+
+    }
   }
 `;
 
@@ -88,6 +94,7 @@ export const BalanceTitle = styled.p`
   line-height: px;
   letter-spacing: 0em;
   color: rgba(250, 250, 250, 1);
+  z-index : 1;
 `;
 export const BalanceAmount = styled.p`
   color: rgba(250, 250, 250, 1);

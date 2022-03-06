@@ -1,15 +1,13 @@
 import styled from "styled-components";
 
 export const SidebarContainer = styled.div`
-  overflow-y : scroll;
-  
+  overflow-x : ;
 `;
 
 export const Logo = styled.div`
   margin-left: 3rem;
   padding-top: 1em;
   margin-bottom: 2.3rem;
-  transition: all 0.3s cubic-bezier(0.42, 0, 0.58, 1);
   @media screen and (max-width: 768px) {
     display: none;
   }
@@ -23,6 +21,9 @@ export const Menu = styled.div`
   line-height: 17px;
   letter-spacing: 0em;
   padding: 30px;
+  @media screen and (max-width : 768px){
+    padding : 0;
+  }
 `;
 export const SidebarItems = styled.ul`
   list-style: none;
@@ -34,17 +35,17 @@ export const SidebarItems = styled.ul`
   left: 0;
   top: 0;
   z-index: 99;
-  overflow: hidden;
+  overflow: ;
   padding-top: 25px;
   transition: all 0.3s cubic-bezier(0.42, 0, 0.58, 1);
   .closebtn {
     display: none;
     @media screen and (max-width: 768px) {
       display: block;
-      color: white;
+      color: black;
       margin-left: 11rem;
-      margin-top: 20px;
-      margin-bottom: 2rem;
+      margin-top: 0px;
+      margin-bottom: 1rem;
       width: 30px;
       height: 27px;
       bottom: 10px;
@@ -63,7 +64,6 @@ export const SidebarItems = styled.ul`
     bottom: 0;
     overflow-x: hidden;
     height: 100%;
-    // transition: all 0.7s ease;
   }
 `;
 
@@ -110,3 +110,33 @@ export const SidebarListTitle = styled.div`
 
   transition: all 0.3s cubic-bezier(0.42, 0, 0.58, 1);
 `;
+
+export const MobileTopBar = styled.div`
+  display: none;
+  @media screen and (max-width : 768px){
+    color : black;
+    display : block;
+  //  background-color : rgba(243, 241, 241, 0.98);
+    display : flex;
+    justify-content : space-between;
+    margin : 0 auto;
+    padding : 15px 13px 10px 13px;
+    width : 92%;
+    margin-top : em;
+  
+  }
+`
+export const Bars = styled.div`
+width : 24px;
+cursor : pointer;
+color : black;
+.bars{
+  width : 24px;
+  height : 1.86px;
+  background : black;
+  margin : 8px 0;
+}
+`
+export const Logoo = styled.div`
+//  margin : 0 auto;
+`

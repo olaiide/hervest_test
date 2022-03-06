@@ -1,4 +1,5 @@
 import icon from "../../assets/save.svg"
+import arrow from "../../assets/arrow.svg"
 import plan from "../../assets/plan.svg"
 import farmer from "../../assets/farmer.svg"
 import girls from "../../assets/girls.svg"
@@ -43,6 +44,7 @@ export const SaveData = [
     title : 'Save for raining days',
     icon,
     amount : 'N400.000',
+    arrow,
   }
 ]
 

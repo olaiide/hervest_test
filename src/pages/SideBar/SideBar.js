@@ -1,5 +1,6 @@
-import React, { Fragment } from "react";
+import React, { Fragment, useState } from "react";
 import { SideBarData } from "./SideBarData";
+import { X } from "phosphor-react";
 import logo from "../../assets/logo.svg";
 import {
   SidebarContainer,
@@ -9,15 +10,23 @@ import {
   SidebarList,
   SidebarListIcon,
   SidebarListTitle,
+  MobileTopBar,
+  Bars,
+  Logoo
 } from "./SideBarElements";
 const SideBar = () => {
+    const [isOpen, setIsOpen] = useState(false);
+    const openMobileMenu = () => {
+        setIsOpen(!isOpen)
+    }
   return (
     <Fragment>
       <SidebarContainer>
-        <SidebarItems>
+        <SidebarItems click={isOpen}>
           <Logo>
             <img src={logo} alt='hervest-logo' />
           </Logo>
+          <div className="closebtn" onClick={openMobileMenu}>< X size={28} /></div>
         <Menu>
             Menu
         </Menu>
@@ -29,6 +38,20 @@ const SideBar = () => {
           ))}
         </SidebarItems>
       </SidebarContainer>
+      <MobileTopBar>
+     
+        <Logoo>
+          <img src={logo} alt='mobile monnyremit logo' />
+        </Logoo>
+          <Bars onClick={openMobileMenu}>
+          <div className="wrapper">
+          <div className="bars"></div>
+          <div className="bars"></div>
+          <div className="bars"></div>
+          </div>
+        </Bars>
+        
+      </MobileTopBar>
     </Fragment>
   );
 };

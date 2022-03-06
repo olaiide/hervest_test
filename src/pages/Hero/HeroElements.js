@@ -1,12 +1,16 @@
 import styled, { css } from "styled-components";
-
+import ellipse from "../../assets/ellipse1.svg"
 export const Container = styled.div`
   min-height: 100vh;
   background-color: rgba(243, 241, 241, 0.98);
   background-color: #faf9f6;
   margin-left: 20%;
-  overflow-x: hidden;
-  overflow-y: scroll;
+  overflow: hidden;
+  @media screen and (max-width : 768px){
+    margin-left: 0% ;
+  }
+  /* overflow-x: hidden;
+  overflow-y: scroll; */
 `;
 export const Wrapper = styled.div`
   width: 93%;
@@ -43,6 +47,23 @@ export const BalanceWrapper = styled.div`
   display: grid;
   grid-template-columns: repeat(4, 0.3fr);
   justify-content: center;
+  position:  relative;
+  @media screen and (max-width : 768px){
+    grid-template-columns : repeat(2, 0.3fr);
+    height : 400px;
+  }
+  ::before{
+  content: "";
+  background: url(${ellipse});
+  background-size: cover;
+  background-position: center;
+  top : 0;
+  left : -300px;
+   right : -250px;
+  bottom : px;
+  height : 100px;
+  width : 200px;
+  }
 `;
 
 export const Balance = styled.div`
@@ -91,18 +112,42 @@ export const PlansTitle = styled.div`
     letter-spacing: 0.02em;
   }
 `;
+export const SaveContainer = styled.div`
+  .arrow {
+    position: relative;
+    bottom: 130px;
+    right: -35px;
+    display: flex;
+    justify-content: flex-end;
+    cursor: pointer;
+    @media screen and (max-width : 768px){
+      display: none;
+    }
+  }
+`;
 export const SaveWrapper = styled.div`
   display: flex;
   justify-content: space-between;
+ @media screen and (max-width : 768px){
+   flex-direction: column;
+   justify-content: space-around;
+   height : 600px;
+   background-color: ;
+ }
 `;
 export const SaveCard = styled.div`
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   width: 32%;
   height: 173px;
   background: rgba(255, 255, 255, 1);
   border-radius: 12px;
+  @media screen and (max-width : 768px){
+   width : 100%;
+  justify-content :;
+  height : px;
+ }
 `;
 export const FirstContent = styled.div`
   display: flex;
@@ -153,9 +198,15 @@ export const SecondContent = styled.div`
 export const DataWrapper = styled.div`
   display: flex;
   justify-content: space-between;
-
-  margin-top: 20px;
+  padding-bottom:  20px;
+  margin-top:-70px;
   padding-bottom: 20px;
+  @media screen and (max-width:768px) {
+    flex-direction : column;
+    justify-content: space-between;
+    margin-top : 8px;
+    height : 610px;
+  }
 `;
 export const DataCard = styled.div`
   display: flex;
@@ -178,6 +229,9 @@ export const DataCard = styled.div`
     `}
   border-radius : 12px;
   width: 32%;
+  @media screen and (max-width : 768px){
+   width : 100%;
+ }
 `;
 export const LeftContent = styled.div`
   padding: 10px;
@@ -226,7 +280,7 @@ export const LeftContent = styled.div`
       props.class === "third" &&
       css`
         background-color: #e2698d;
-        padding: 4px;
+        padding: 4px 7px;
         border-radius: 8px;
         font-family: Montserrat;
         font-size: 12px;

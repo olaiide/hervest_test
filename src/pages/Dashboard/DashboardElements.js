@@ -11,11 +11,11 @@ export const Container = styled.div`
 export const Wrapper = styled.div`
   width: 93%;
   margin: 0 auto;
+  padding-bottom: 100px;
 `;
 export const Header = styled.div`
   margin-top: 2.5rem;
   display: flex;
-  margin-left: em;
   .wrap {
     padding: 15px;
   }
@@ -101,9 +101,10 @@ export const BalanceAmount = styled.p`
   font-family: Montserrat;
   font-size: 20px;
   font-style: normal;
-  font-weight: 500;
+  font-weight: 800;
   letter-spacing: 0.02em;
   padding : 5px;
+  z-index : 1;
 `;
 export const Plans = styled.div``;
 export const PlansTitle = styled.div`

@@ -18,14 +18,14 @@ import {
   DataCard,
   LeftContent,
   RightContent,
-} from "./HeroElements";
+} from "./DashboardElements";
 import header from "../../assets/header.svg";
 import arrow from "../../assets/arrow.svg";
-import { BalanceData, SaveData, Data } from "./HeroData";
+import { BalanceData, SaveData, Data } from "./DashboardData";
 import SideBar from "../SideBar/SideBar";
 import ellipse1 from "../../assets/ellipse1.svg";
 import ellipse2 from "../../assets/ellipse2.svg";
-const Hero = () => {
+const Dashboard = () => {
   return (
     <Fragment>
       <SideBar />
@@ -106,4 +106,4 @@ const Hero = () => {
   );
 };
 
-export default Hero;
+export default Dashboard;

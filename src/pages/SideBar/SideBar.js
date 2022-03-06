@@ -12,7 +12,7 @@ import {
   SidebarListTitle,
   MobileTopBar,
   Bars,
-  Logoo,
+  MobileLogo,
 } from "./SideBarElements";
 const SideBar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -24,7 +24,7 @@ const SideBar = () => {
       <SidebarContainer>
         <SidebarItems click={isOpen}>
           <Logo>
-            <img src={logo} alt='hervest-logo' />
+            <img src={logo} alt='hervest logo' />
           </Logo>
           <div className='closebtn' onClick={openMobileMenu}>
             <X size={28} />
@@ -41,9 +41,9 @@ const SideBar = () => {
         </SidebarItems>
       </SidebarContainer>
       <MobileTopBar>
-        <Logoo>
-          <img src={logo} alt='mobile monnyremit logo' />
-        </Logoo>
+        <MobileLogo>
+          <img src={logo} alt='hervest logo' />
+        </MobileLogo>
         <Bars onClick={openMobileMenu}>
           <div className='wrapper'>
             <div className='bars'></div>

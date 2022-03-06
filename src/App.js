@@ -1,9 +1,9 @@
 import React from "react";
-import Hero from "./pages/Hero/Hero";
+import Dashboard from "./pages/Dashboard/Dashboard";
 function App() {
   return (
     <div className="App">
-     <Hero />
+     <Dashboard />
     </div>
   );
 }

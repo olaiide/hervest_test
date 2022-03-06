@@ -3,7 +3,7 @@ import styled, { css } from "styled-components";
 export const SidebarContainer = styled.div``;
 
 export const Logo = styled.div`
-  margin-top: 1rem;
+  margin-top: 1.3rem;
   @media screen and (max-width: 768px) {
     display: none;
   }
@@ -70,12 +70,16 @@ export const SidebarList = styled.li`
   padding: 13px;
   line-height: 22px;
   font-weight: 600;
+  cursor: pointer;
+  &:hover{
+    background-color: #fdf6f8;
+  }
   ${(props) =>
     props.title === "Dashboard" &&
     css`
       background-color: #fdf6f8;
     `}
-  cursor: pointer;
+  
   @media screen and (max-width: 768px) {
     transition: 2.5s;
     margin-right: 60px;
@@ -125,4 +129,4 @@ export const Bars = styled.div`
     margin: 8px 0;
   }
 `;
-export const Logoo = styled.div``;
+export const MobileLogo = styled.div``;

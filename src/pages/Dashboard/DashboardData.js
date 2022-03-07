@@ -29,19 +29,19 @@ export const BalanceData = [
 export const SaveData = [
   {
     id : 1,
-    title : 'Save for raining days',
+    title : 'Saving for raining days',
     icon,
     amount : 'N400.000',
   },
   {
     id : 2,
-    title : 'Save for raining days',
+    title : 'Saving for raining days',
     icon,
     amount : 'N400.000',
   },
   {
     id : 3,
-    title : 'Save for raining days',
+    title : 'Saving for raining days',
     icon,
     amount : 'N400.000',
     arrow,
@@ -51,7 +51,7 @@ export const SaveData = [
 export const Data = [
   {
     id : 1,
-    title : 'Create a saving plan',
+    title : 'Create a savings plan',
     text : 'Earn up to 12%',
     icon : plan,
     className : 'first'

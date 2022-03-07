@@ -55,7 +55,7 @@ export const BalanceWrapper = styled.div`
     height: 400px;
     background-position: center;
     top: -147px;
-    right: 173px;
+    right: 232px;
     position: absolute;
   }
   .balanceimg2{
